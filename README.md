@@ -1,7 +1,6 @@
-# method-lme-cluster-stat
-**Method for cluster correcting hierarchical/linear mixed effects models in intracranial EEG timeseries**
+## Method for cluster correcting hierarchical/linear mixed effects models in intracranial EEG timeseries
 
-**CODE COMING SOON**
+### CODE COMING SOON
 
 Our research aims to uncover mechanistic explanations of the neural basis of human behavior, that is, move from where to how. Our goals are multifaceted: (1) advance fundamental science by discovering new knowledge using rigorous, reproducible methods; and (2) advance translational applications in neurotechnology, precision medicine, and product development that are grounded in rigorous science. Intracranial EEG (iEEG) is an invaluable tool to study the human brain because it provides data with the high spatiotemporal resolution and signal quality traditionally limited to animal neurophysiology. Analyzing iEEG data on the group level is complex because every neurosurgical patient dataset is different and sample sizes tend to be small. By modeling random effects - that is, iEEG channels (sub-samples of a brain region) and/or experimental trials (sub-samples of a task) nested in subjects, hierarchical models can harmonize iEEG data while maximizing statistical power. This particularly relevant for studies of inter-individual variability, as described in:
 - Johnson, EL, Knight, RT. How can iEEG be used to study inter-individual and developmental differences? in _Intracranial EEG: A Guide for Cognitive Neuroscientists_ (ed N Axmacher) (Springer, Cham, 2023). [DOI](https://doi.org/10.1007/978-3-031-20910-9_10)
