@@ -27,8 +27,8 @@ data = load(fullfile(datdir, 'lme_data_1way'));
 
 % initialize structure for model outputs
 lme = [];
-lme.F = nan(1, size(data.data, 2));
-lme.p = lme.F;
+lme.t = nan(1, size(data.data, 2));
+lme.p = lme.t;
 
 % run model per timepoint, looping through timepoints
 disp(' ');
@@ -41,11 +41,10 @@ for t = 1:size(data.data, 2)
     
     % run model
     tmp_lme = fitlme(tmp_dat, 'data ~ hit_miss + (1|sid) + (1|sid:ch)');
-    tmp_lme = anova(tmp_lme);
 
     % extract model outputs
-    lme.F(t) = tmp_lme{2,2};
-    lme.p(t) = tmp_lme{2,5};
+    lme.t(t) = tmp_lme.Coefficients{2,4};
+    lme.p(t) = tmp_lme.Coefficients{2,6};
 
     clear tmp*
 end
@@ -53,7 +52,7 @@ end
 % create null distributions for cluster testing
 nperm = 1000; % number of permutations
 
-hit_miss_main = lme.F'; % model stats
+hit_miss_main = lme.t'; % model stats
 
 sid_ch = strcat(data.sid, '_', data.ch); % channel-nested-in-subject IDs
 uid = unique(sid_ch); % unique IDs
@@ -110,3 +109,4 @@ lme.p_clust = p(:)';
 
 % save
 save(fullfile(savdir, 'lme_clust_1way'), 'lme');
+
