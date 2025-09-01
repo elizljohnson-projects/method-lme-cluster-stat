@@ -89,10 +89,9 @@ for p = 1:nperm
         
         % run model
         tmp_lme = fitlme(tmp_dat, 'data ~ hit_miss + (1|sid) + (1|sid:ch)');
-        tmp_lme = anova(tmp_lme);
 
         % extract model outputs
-        hit_miss_main_null(t,p) = tmp_lme{2,2};
+        hit_miss_main_null(t,p) = tmp_lme.Coefficients{2,4};
         
         clear tmp*
     end
@@ -109,4 +108,3 @@ lme.p_clust = p(:)';
 
 % save
 save(fullfile(savdir, 'lme_clust_1way'), 'lme');
-
