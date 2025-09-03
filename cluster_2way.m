@@ -136,19 +136,20 @@ clear data
 
 % main effect of within-channel variable (hit/miss)
 disp(' ');
-[~,p,~] = cluster_test(hit_miss_main, hit_miss_main_null);
+[~,p,~] = cluster_test(hit_miss_main, hit_miss_main_null, 1);
 lme.hit_miss.p_clust = p(:)';
 
 % main effect of between-channel variable (region)
 disp(' ');
-[~,p,~] = cluster_test(region_main, region_main_null);
+[~,p,~] = cluster_test(region_main, region_main_null, 1);
 lme.region.p_clust = p(:)';
 
 % interaction (hit/miss*region)
 disp(' ');
-[~,p,~] = cluster_test(int, int_null);
+[~,p,~] = cluster_test(int, int_null, 1);
 lme.int.p_clust = p(:)';
 
 % save
 save(fullfile(savdir, 'lme_clust_2way'), 'lme');
+
 
