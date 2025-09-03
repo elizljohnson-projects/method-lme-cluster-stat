@@ -2,7 +2,8 @@
 % within-channel fixed effect (2 levels), with the random effects of 
 % subject and channel nested in subject. Perform cluster-based corrections 
 % for multiple comparisons across timepoints, preserving the random effects
-% structure.
+% structure. The outputs are two-tailed t-statistics with uncorrected and 
+% cluster-corrected p-values.
 %
 % Download sample data file: https://drive.google.com/file/d/1i170RbUZuRQzY8gzEC99XBdo4uyCbsl4/view?usp=sharing
 % Contains the following variables:
@@ -108,3 +109,4 @@ lme.p_clust = p(:)';
 
 % save
 save(fullfile(savdir, 'lme_clust_1way'), 'lme');
+
