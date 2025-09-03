@@ -2,7 +2,8 @@
 % within-channel fixed effect (2 levels) and one between-channel fixed 
 % effect (2 levels), with the random effects of subject and channel nested 
 % in subject. Perform cluster-based corrections for multiple comparisons 
-% across timepoints, preserving the random effects structure.
+% across timepoints, preserving the random effects structure. The outputs 
+% are F-statistics with uncorrected and cluster-corrected p-values.
 %
 % Download sample data file: https://drive.google.com/file/d/1AYk6KAdVkZbDSJkTKwI4XJCmdEofD9rV/view?usp=sharing
 % Contains the following variables:
@@ -150,3 +151,4 @@ lme.int.p_clust = p(:)';
 
 % save
 save(fullfile(savdir, 'lme_clust_2way'), 'lme');
+
