@@ -150,6 +150,7 @@ disp(' ');
 lme.int.p_clust = p(:)';
 
 % save
-save(fullfile(savdir, 'lme_clust_2way'), 'lme');
+save(fullfile(savdir, 'lme_clust_2way'), 'lme', '-v7.3');
+
 
 
