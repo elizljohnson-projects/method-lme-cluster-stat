@@ -13,6 +13,6 @@ Software:
 - MATLAB 9.7 (last tested with R2024b)
 
 Notes:
-- Use cluster_1way for models with one fixed effect. It was designed for the fixed effect of hit vs. miss on a memory task, and may be used for models with one fixed effect with two levels.
-- Use cluster_2way for models with two fixed effects and their interaction. It was designed for the fixed effects of (1) hit vs. miss on a memory task and (2) brain region, and may be used as a template for models with more than two fixed effects and/or fixed effects with more than two levels.
+- Use cluster_1way for models with one fixed effect with two levels. It was designed for the fixed effect of hit vs. miss on a memory task, and may be used as a template for other models with an equivalent design.
+- Use cluster_2way for models with two fixed effects and their interaction. It was designed for the fixed effects of (1) hit vs. miss on a memory task and (2) one brain region vs. another, and may be used as a template for models with more than two fixed effects and/or fixed effects with more than two levels.
 - Both scripts call the subfunction cluster_test.
