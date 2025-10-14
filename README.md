@@ -9,10 +9,29 @@ The method is described in:
 
 Publications or other papers using these scripts should cite the publication above.
 
-Software:
-- MATLAB 9.7 (last tested with R2024b)
+### Run using Python or MATLAB
+Python:
+- Software: Python 3.12.12
+- Environment: Google Colab
+- Package versions:
+  - NumPy 2.0.2
+  - Pandas 2.2.2
+  - SciPy 1.16.2
+  - Statsmodels 0.14.5
+- Notebooks:
+  - cluster_1way.ipynb
+  - cluster_2way.ipynb
+- Subfunctions: cluster_utils.py
+  - Upload to Colab File panel
+
+MATLAB:
+- Software: MATLAB 9.7 (last tested with R2024b)
+- Scripts:
+  - cluster_1way.m
+  - cluster_2way.m
+- Subfunctions: subfunctions.zip
+  - Unzip folder
 
 Notes:
 - Use cluster_1way for models with one fixed effect with two levels. It was designed for the fixed effect of hit vs. miss on a memory task, and may be used as a template for other models with an equivalent design.
 - Use cluster_2way for models with two fixed effects and their interaction. It was designed for the fixed effects of (1) hit vs. miss on a memory task and (2) one brain region vs. another, and may be used as a template for models with more than two fixed effects and/or fixed effects with more than two levels.
-- Both scripts call the subfunction cluster_test.
