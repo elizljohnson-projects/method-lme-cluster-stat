@@ -34,6 +34,6 @@ MATLAB:
   - Unzip folder
 
 Notes:
-- Use cluster_1way for models with one fixed effect with two levels. It was designed for the fixed effect of hit vs. miss on a memory task, and may be used as a template for other models with an equivalent design.
-- Use cluster_2way for models with two fixed effects and their interaction. It was designed for the fixed effects of (1) hit vs. miss on a memory task and (2) one brain region vs. another, and may be used as a template for models with more than two fixed effects and/or fixed effects with more than two levels.
-- Running 1000 permutations requires fitting 1000 models per timepoint (sample data file: 139 timepoints × 1000 permutations = 139,000 models), which can take several hours or more depending on hardware allocation. Set nperm to a lower number for prototyping. 
+- Use `cluster_1way` for models with one fixed effect with two levels. It was designed for the fixed effect of hit vs. miss on a memory task, and may be used as a template for other models with an equivalent design.
+- Use `cluster_2way` for models with two fixed effects and their interaction. It was designed for the fixed effects of (1) hit vs. miss on a memory task and (2) one brain region vs. another, and may be used as a template for models with more than two fixed effects and/or fixed effects with more than two levels.
+- Running 1000 permutations requires fitting 1000 models per timepoint (sample data file: 139 timepoints × 1000 permutations = 139,000 models), which can take several hours or more depending on hardware allocation. Set `nperm` to a lower number for prototyping. 
